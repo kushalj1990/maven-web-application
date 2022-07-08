@@ -98,14 +98,14 @@
 	
 	    <repository>
 	      <id>nexus</id>
-	      <name>Mithun Technologies Releases Nexus Repository</name>
-	      <url>http://65.2.132.164:8081/repository/Nexus-facebook-release/</url>
+	      <name>Instareel Releases Nexus Repository</name>
+	      <url>http://13.232.31.152:8081/repository/Instalreel_Nexus_Release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
-	      <name>Mithun Technologies Snapshot Nexus Repository </name>
-	      <url>http://65.2.132.164:8081/repository/Nexus-facebook-snapshot/</url>
+	      <name>Insta reel Snapshot Nexus Repository </name>
+	      <url>http://13.232.31.152:8081/repository/Instalreel_Nexus_Snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
