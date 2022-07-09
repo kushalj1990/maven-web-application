@@ -105,7 +105,7 @@
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Insta reel Snapshot Nexus Repository </name>
-	      <url>http://13.232.31.152:8081/repository/Instalreel_Nexus_Snapshot/</url>
+	      <url>http://65.1.114.121:8081/repository/Instalreel_Nexus_Snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
