@@ -98,14 +98,14 @@
 	
 	    <repository>
 	      <id>nexus</id>
-	      <name>Instareel Releases Nexus Repository</name>
-	      <url>http://13.232.176.29:8081/repository/Instalreel_Nexus_Release/</url>
+	      <name>Youtube Releases Nexus Repository</name>
+	      <url>http://65.0.185.109:8081/repository/Youtube_Nexus_Release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Insta reel Snapshot Nexus Repository </name>
-	      <url>http://13.232.176.29:8081/repository/Instalreel_Nexus_Snapshot/</url>
+	      <url>http://65.0.185.109:8081/repository/Youtube_Nexus_Snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
