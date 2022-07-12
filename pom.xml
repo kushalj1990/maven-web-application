@@ -99,13 +99,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Youtube Releases Nexus Repository</name>
-	      <url>http://65.0.185.109:8081/repository/Youtube_Developer_Release/</url>
+	      <url>http://13.234.35.134:8081/repository/Youtube_Developer_Release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Insta reel Snapshot Nexus Repository </name>
-	      <url>http://65.0.185.109:8081/repository/Youtube_Developer_Snapshot/</url>
+	      <url>http://13.234.35.134:8081/repository/Youtube_Developer_Snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
