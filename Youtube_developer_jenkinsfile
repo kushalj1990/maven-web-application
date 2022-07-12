@@ -6,6 +6,10 @@ node{
     properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', 
     daysToKeepStr: '', numToKeepStr: '5')), [$class: 'JobLocalConfiguration', changeReasonComment: '']])
     
+    //Build name addition
+    
+    buildName 'Youtube_developer_Build No. ${BUILD_NAME}'
+    
     stage('Code checkout')
     {git branch: 'development', credentialsId: 'a3d54419-af0b-4295-8532-f4939e69eb8e', 
     url: 'https://github.com/kushalj1990/maven-web-application.git'}
