@@ -1,0 +1,56 @@
+pipeline {
+    agent any
+    
+    tools{
+        maven "Maven3.8.6"
+    }
+    
+options {
+  buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '5', numToKeepStr: '')
+  timestamps()
+}
+
+triggers {
+  pollSCM '* * * * *'
+  cron '* * * * *'
+}
+    stages { 
+        //Code check out run
+        stage('Code checkout from GitHub') {
+            steps {
+                git branch: 'development', credentialsId: 'a3d54419-af0b-4295-8532-f4939e69eb8e',
+                url: 'https://github.com/kushalj1990/maven-web-application.git'
+            }
+        }
+        
+        //Package build from maven
+        stage('Package build') {
+            steps {
+                sh "mvn clean package"
+            }
+        }
+        
+        //Execute Sonarqube report
+        stage('Genrerate Sonarqube report') {
+            steps {
+                sh "mvn sonar:sonar"
+            }
+        }
+        
+        //Store code details in Repository
+        stage('Store code in Nexus Repo') {
+            steps {
+                sh "mvn deploy"
+            }
+        }
+        
+        //Deploy code into Tomcat server  
+        stage('Deplao code in Tomcat server') {
+            steps {
+                sshagent(['370dd5dc-0d01-42b4-bbbe-7442d0d4a45d']) {
+    sh "scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/Youtube_jenkins_Declerative/target/maven-web-application.war ec2-user@65.2.29.95:/opt/apache-tomcat-9.0.64/webapps"
+}
+            }
+        } 
+    }//Stages
+}//Pipeline
